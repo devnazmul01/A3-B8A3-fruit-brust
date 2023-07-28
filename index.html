@@ -18,7 +18,7 @@
             extend: {
               colors: {
                 clifford: '#da373d',
-                'btn-primary: #F85559',
+                'bt-primary': '#F85559',
               }
             }
           }
@@ -31,49 +31,27 @@
         /* nav list */
         nav li{
             padding: 1em;
+            
         }
-        /* banner bg img */
-        /* <img src="images/banner1.png" class="w-full" /> */
-        #slide1{
-            background-image: url("images/banner1.png");
-            width: 1420px;
-            height: 600px;
-            background-color: #121212;
-        }
-        #slide2{
-            background-image: url("images/banner2.png");
-            width: 1420px;
-            height: 600px;
-            background-color: #121212;
-        }
-        #slide3{
-            background-image: url("images/banner3.png");
-            width: 1420px;
-            height: 600px;
-            background-color: #121212;
-        }
-        #slide4{
-            background-image: url("images/banner4.png");
-            width: 1420px;
-            height: 600px;
-            background-color: #121212;
+        .carousel-item{
+          height: 690px;
         }
         
     </style>
 </head>
 <body class="font-lato">
-    <header class="mx-14">
+    <header class="md:container md:mx-auto">
         <nav>
-            <div class="grid grid-cols-3 navbar bg-[#F85559] rounded-full">
+            <div class="mx-14 grid grid-cols-3 bg-[#F85559] rounded-full mt-12">
                 <div>
-                  <ul class="flex text-white">
+                  <ul class="flex text-white p-4">
                     <li>Home</li>
                     <li>About Us</li>
                     <li>Shop</li>
                     <li>All Fruits</li>
                   </ul>
                 </div>
-                <div>
+                <div class="flex gap-2 p-4">
                     <div class="w-10 rounded-full">
                       <img src="images/logo.png" />
                     </div>
@@ -81,69 +59,70 @@
                       <h2 class="font-bold text-4xl text-white">Fruit Burst</h2>
                     </div>
                 </div>
-                <div>
+                <div class="p-4">
                 <input type="text" placeholder="Search here" class="input rounded-3xl"/>
                 </div>               
             </div>
         </nav>
+
+        <!-- slider or carousel -->
+        <div class="carousel mx-14 rounded-lg mt-12">
+          <!-- slide 1 -->
+          <div id="slide1" class="carousel-item relative w-full hero" style="background-image: url(images/banner1.png);">
+            <div class="hero-overlay bg-opacity-60"></div>
+            <div class="text-center">
+              <h1 class="text-white text-6xl font-extrabold">Exotic tastes at your <br> doorstep</h1>
+              <p class="text-white text-[1.2rem] pb-12 pt-6">We supply highly quality organic products</p>
+              <button class="btn bg-[#F85559] text-white rounded-xl px-7 py-5">Shop Now</button>
+            </div>
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a href="#slide4" class="btn btn-circle">❮</a> 
+              <a href="#slide2" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+          <!-- slide 2 -->
+          <div id="slide2" class="carousel-item relative w-full hero" style="background-image: url(images/banner2.png);">
+            <div class="hero-overlay bg-opacity-60"></div>
+            <div class="text-center">
+              <h1 class="text-white text-6xl font-extrabold">Exotic tastes at your <br> doorstep</h1>
+              <p class="text-white text-[1.2rem] pb-12 pt-6">We supply highly quality organic products</p>
+              <button class="btn bg-[#F85559] text-white rounded-xl px-7 py-5">Shop Now</button>
+            </div>
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a href="#slide1" class="btn btn-circle">❮</a> 
+              <a href="#slide3" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+          <!-- slide 3 -->
+          <div id="slide3" class="carousel-item relative w-full hero" style="background-image: url(images/banner3.png);">
+            <div class="hero-overlay bg-opacity-60"></div>
+            <div class="text-center">
+              <h1 class="text-white text-6xl font-extrabold">Exotic tastes at your <br> doorstep</h1>
+              <p class="text-white text-[1.2rem] pb-12 pt-6">We supply highly quality organic products</p>
+              <button class="btn bg-[#F85559] text-white rounded-xl px-7 py-5">Shop Now</button>
+            </div>
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a href="#slide2" class="btn btn-circle">❮</a> 
+              <a href="#slide4" class="btn btn-circle">❯</a>
+              </div>
+          </div>
+          <!-- slide 4 -->
+          <div id="slide4" class="carousel-item relative w-full hero" style="background-image: url(images/banner4.png);">
+            <div class="hero-overlay bg-opacity-60"></div>
+            <div class="text-center">
+              <h1 class="text-white text-6xl font-extrabold">Exotic tastes at your <br> doorstep</h1>
+              <p class="text-white text-[1.2rem] pb-12 pt-6">We supply highly quality organic products</p>
+              <button class="btn bg-[#F85559] text-white rounded-xl px-7 py-5">Shop Now</button>
+            </div>
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a href="#slide3" class="btn btn-circle">❮</a> 
+              <a href="#slide1" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+          
     </header>
     <main class="mx-auto container">
-        <section class="banner">
-            <div class="carousel">
-
-                <!-- slide 1 -->
-                <div id="slide1" class="carousel-item relative mt-14">
-                  <div class="px-96 py-20 items-center justify-center text-center">
-                    <h1 class="text-white text-6xl font-extrabold">Exotic tastes at your <br> doorstep</h1>
-                    <p class="text-white text-[1.2rem] pb-12 pt-6">We supply highly quality organic products</p>
-                    <button class="btn bg-[#F85559] text-white rounded-xl px-7 py-5">Shop Now</button>
-                  </div>
-                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide4" class="btn btn-circle">❮</a> 
-                    <a href="#slide2" class="btn btn-circle">❯</a>
-                  </div>
-                </div> 
-
-                <!-- slide 2 -->
-                <div id="slide2" class="carousel-item relative mt-14">
-                    <div class="px-96 py-20 items-center justify-center text-center">
-                        <h1 class="text-white text-6xl font-extrabold">Exotic tastes at your <br> doorstep</h1>
-                        <p class="text-white text-[1.2rem] pb-12 pt-6">We supply highly quality organic products</p>
-                        <button class="btn bg-[#F85559] text-white rounded-xl px-7 py-5">Shop Now</button>
-                      </div>
-                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide1" class="btn btn-circle">❮</a> 
-                    <a href="#slide3" class="btn btn-circle">❯</a>
-                  </div>
-                </div> 
-
-                <!-- slide 3 -->
-                <div id="slide3" class="carousel-item relative mt-14">
-                    <div class="px-96 py-20 items-center justify-center text-center">
-                        <h1 class="text-white text-6xl font-extrabold">Exotic tastes at your <br> doorstep</h1>
-                        <p class="text-white text-[1.2rem] pb-12 pt-6">We supply highly quality organic products</p>
-                        <button class="btn bg-[#F85559] text-white rounded-xl px-7 py-5">Shop Now</button>
-                    </div>
-                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide2" class="btn btn-circle">❮</a> 
-                    <a href="#slide4" class="btn btn-circle">❯</a>
-                    </div>
-                </div> 
-
-                <!-- slide 4 -->
-                <div id="slide4" class="carousel-item relative mt-14">
-                    <div class="px-96 py-20 items-center justify-center text-center">
-                        <h1 class="text-white text-6xl font-extrabold">Exotic tastes at your <br> doorstep</h1>
-                        <p class="text-white text-[1.2rem] pb-12 pt-6">We supply highly quality organic products</p>
-                        <button class="btn bg-[#F85559] text-white rounded-xl px-7 py-5">Shop Now</button>
-                      </div>
-                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide3" class="btn btn-circle">❮</a> 
-                    <a href="#slide1" class="btn btn-circle">❯</a>
-                  </div>
-                </div>
-              </div>
-        </section>
+        
         <section class="deal mx-14 mt-60">
             <div class="upsec flex">
                 <div class="deal-title flex-1">
@@ -239,24 +218,100 @@
                 <button class=" btn bg-[#F85559] text-white rounded-xl px-7 py-5 mt-12">Shop All</button>
             </div>
         </section>
+        <!-- team section -->
         <section class="team mx-14 mt-40">
-            <div class="hero min-h-screen" style="background-image: url(images/team.png);">
+            <div class="hero h-[690px]" style="background-image: url(images/team.png);">
                 <div class="hero-overlay bg-opacity-60"></div>
                 <div class="hero-content text-center text-neutral-content">
-                  <div class="max-w-md">
-                    <h1 class="mb-5 text-5xl font-bold">Meet the team section</h1>
-                    <p class="mb-5">Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                  <!-- two sec -->
+                  <div class="grid grid-rows-2 items-center justify-center">
+                    <div class="max-w-md">
+                      <h1 class="mb-5 text-6xl font-bold">Meet the team section</h1>
+                      <p class="mb-5">Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                    </div>
+                    <!-- members -->
+                    <div class="gap-36 grid grid-cols-4 px-44">
+                      <!-- member1 -->
+                    <div>
+                      <div>
+                        <img class="w-32 h-32" src="images/member1.png" alt="">
+                        <h3>Awlad Hossain</h3>
+                        <p>Fruit Expert</p>
+                      </div>
+                      <div>
+                        <ul class="flex gap-2">
+                          <li><img class="w-6 h-6" src="images/facebook_5968764.png" alt=""></li>
+                          <li><img class="w-6 h-6" src="images/twitter_3670211.png" alt=""></li>
+                          <li><img class="w-6 h-6" src="images/linkedin_1377213.png" alt=""></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- member2 -->
+                    <div>
+                      <div>
+                        <img class="w-32 h-32" src="images/member2.png" alt="">
+                        <h3>Safia</h3>
+                        <p>Fruit Expert</p>
+                      </div>
+                      <div>
+                        <ul class="flex gap-2">
+                          <li><img class="w-6 h-6" src="images/facebook_5968764.png" alt=""></li>
+                          <li><img class="w-6 h-6" src="images/twitter_3670211.png" alt=""></li>
+                          <li><img class="w-6 h-6" src="images/linkedin_1377213.png" alt=""></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- member3 -->
+                    <div>
+                      <div>
+                        <img class="w-32 h-32" src="images/member3.png" alt="">
+                        <h3>Rokib</h3>
+                        <p>Fruit Expert</p>
+                      </div>
+                      <div>
+                        <ul class="flex gap-2">
+                          <li><img class="w-6 h-6" src="images/facebook_5968764.png" alt=""></li>
+                          <li><img class="w-6 h-6" src="images/twitter_3670211.png" alt=""></li>
+                          <li><img class="w-6 h-6" src="images/linkedin_1377213.png" alt=""></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- member4 -->
+                    <div>
+                      <div>
+                        <img class="w-32 h-32" src="images/member4.png" alt="">
+                        <h3>Chaity</h3>
+                        <p>Fruit Expert</p>
+                      </div>
+                      <div>
+                        <ul class="flex gap-2">
+                          <li><img class="w-6 h-6" src="images/facebook_5968764.png" alt=""></li>
+                          <li><img class="w-6 h-6" src="images/twitter_3670211.png" alt=""></li>
+                          <li><img class="w-6 h-6" src="images/linkedin_1377213.png" alt=""></li>
+                        </ul>
+                      </div>
+                    </div>
+                    </div>
                   </div>
                 </div>
               </div>
         </section>
     </main>
+    <!-- footer -->
     <footer class="footer footer-center p-10 bg-black text-primary-content">
-        <div>
+        <div class="flex">
           <img src="images/logo.png" alt="">
-          <p class="font-bold">
+          <p class="font-bold text-4xl text-white">
             Fruit Burst
           </p> 
+        </div>
+        <div>
+          <ul class="flex text-white p-4 gap-4">
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Shop</li>
+            <li>All Fruits</li>
+          </ul>
         </div> 
         <p>Copyright © 2023 - All right reserved</p>
         <div>
